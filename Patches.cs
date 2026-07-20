@@ -12,7 +12,7 @@ namespace Trespasser
     {
         private const float SELECT_DURATION = 0.7f;
         private const float DESELECT_DURATION = 0.7f;
-        private const int TRESPASSER_MENU_INDEX = 4;
+        private const int TRESPASSER_MENU_INDEX = 5;
 
         private static Panel_SelectExperience.XPModeMenuItem mTrespasserMenuItem;
         private static Panel_SelectExperience.XPModeMenuItem mInterloperMenuItem;
