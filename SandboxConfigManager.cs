@@ -107,44 +107,44 @@ namespace Trespasser
         {
             var xp = trespasser.m_XPMode;
 
-            xp.m_WeatherDurationScale = 0.325f;
-            xp.m_ChanceOfBlizzardScale = 1.775f;
-            xp.m_FreezingRateScale = 1.585f;
+            xp.m_WeatherDurationScale = 3f;
+            xp.m_ChanceOfBlizzardScale = 1f;
+            xp.m_FreezingRateScale = 1f;
             xp.m_FrostbiteDamageMultiplier = 1.425f;
             xp.m_OutdoorTempDropCelsiusMax = 17f;
             xp.m_OutdoorTempDropDayStart = 10;
             xp.m_OutdoorTempDropDayFinal = 95;
             xp.m_NumHoursWarmForHypothermiaCureScale = 1.85f;
-            xp.m_ClosestSpawnDistanceAfterTransitionScale = 0.6f;  
+            xp.m_ClosestSpawnDistanceAfterTransitionScale = 0.8f;  
             xp.m_RespawnHoursScaleMax = 3.2f;
             xp.m_RespawnHoursScaleDayFinal = 90;
             xp.m_RadialRespawnTimeScaleMax = 2.6f;
             xp.m_RadialRespawnTimeScaleDayStart = 7;
             xp.m_RadialRespawnTimeScaleDayFinal = 110;
-            xp.m_FishCatchTimeScaleMax = 1.6f;
+            xp.m_FishCatchTimeScaleMax = 1.3f;
             xp.m_FishCatchTimeScaleDayStart = 6;
             xp.m_FishCatchTimeScaleDayFinal = 31;
-            xp.m_CalorieBurnScale = 0.95f;
-            xp.m_ThirstRateScale = 1.15f;
-            xp.m_FatigueRateScale = 0.85f;
-            xp.m_ConditonRecoveryFromRestScale = 0.65f;
-            xp.m_ConditonRecoveryWhileAwakeScale = 0.65f;
-            xp.m_DecayScale = 1.65f;
-            xp.m_GearSpawnChanceScale = 0.275f;
-            xp.m_ChanceForEmptyContainer = 82;
-            xp.m_StruggleTapStrengthScale = 0.88f;
-            xp.m_StrugglePlayerDamageReceivedScale = 1.325f;
+            xp.m_CalorieBurnScale = 1.1f;
+            xp.m_ThirstRateScale = 1f;
+            xp.m_FatigueRateScale = 1f;
+            xp.m_ConditonRecoveryFromRestScale = 0.4f;
+            xp.m_ConditonRecoveryWhileAwakeScale = 0.1f;
+            xp.m_DecayScale = 0.75f;
+            xp.m_GearSpawnChanceScale = 0.195f;
+            xp.m_ChanceForEmptyContainer = 89;
+            xp.m_StruggleTapStrengthScale = 0.79f;
+            xp.m_StrugglePlayerDamageReceivedScale = 1.2f;
             xp.m_StrugglePlayerClothingDamageScale = 1.325f;
-            xp.m_IntestinalParasitesNumberOfRemedyDoses = 17;
-            xp.m_DaysBeforeCabinFeverRiskOnset = 11;
+            xp.m_IntestinalParasitesNumberOfRemedyDoses = 20;
+            xp.m_DaysBeforeCabinFeverRiskOnset = 7;
         }
 
         private static void ConfigureSandboxCougarSettings(SandboxConfig trespasser, SandboxConfig stalker, SandboxConfig interloper)
         {
             trespasser.m_XPMode.m_CougarSettings = UnityEngine.Object.Instantiate(interloper.m_XPMode.m_CougarSettings);
             trespasser.m_XPMode.m_CougarSettings.m_ArrivalTimeMinimumDays = 14f;
-            trespasser.m_XPMode.m_CougarSettings.m_ArrivalTimeGuaranteedDays = 16f;
-            trespasser.m_XPMode.m_CougarSettings.m_RespawnCooldownDays = 12f;
+            trespasser.m_XPMode.m_CougarSettings.m_ArrivalTimeGuaranteedDays = 30f;
+            trespasser.m_XPMode.m_CougarSettings.m_RespawnCooldownDays = 300f;
         }
 
         #endregion
@@ -162,14 +162,12 @@ namespace Trespasser
 
         private static readonly (string prefab, int count)[] mGearDefinitions =
         {
-            ("GEAR_PackMatches",         3),
-            ("GEAR_WaterSupplyPotable",  1),
-            ("GEAR_CandyBar",            1),
-            ("GEAR_BasicWoolHat",        1),
+            ("GEAR_Firestriker",         1),
+            ("GEAR_BaseballCap",        1),
             ("GEAR_LongUnderwear",       1),
-            ("GEAR_WoolSocks",           1),
+            ("GEAR_CottonSocks",           1),
             ("GEAR_BasicShoes",          1),
-            ("GEAR_WorkPants",           1),
+            ("GEAR_Jeans",           1),
             ("GEAR_LightShell",          1),
             ("GEAR_RecycledCan",         1),
         };
