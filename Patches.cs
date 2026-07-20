@@ -12,7 +12,7 @@ namespace Trespasser
     {
         private const float SELECT_DURATION = 0.7f;
         private const float DESELECT_DURATION = 0.7f;
-        private const int TRESPASSER_MENU_INDEX = 3;
+        private const int TRESPASSER_MENU_INDEX = 4;
 
         private static Panel_SelectExperience.XPModeMenuItem mTrespasserMenuItem;
         private static Panel_SelectExperience.XPModeMenuItem mInterloperMenuItem;
@@ -230,7 +230,7 @@ namespace Trespasser
             if (!IsTrespasserMode()) return false;
             if (instance.GetComponent<GearItem>() == null) return false;
             var roll = new System.Random().NextDouble();
-            bool shouldAllow = roll <= (Settings.Instance.InterloperBannedSpawnChance * 0.01f);
+            bool shouldAllow = false;
             if (shouldAllow && !string.IsNullOrEmpty(instance.gameObject.scene.name))
                 MelonLogger.Msg($"Allowing spawn of {instance.name} at {instance.gameObject.transform.position}");
             return shouldAllow;
